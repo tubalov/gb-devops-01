@@ -1,0 +1,658 @@
+### 1. Просмотреть содержимое директорий /etc, /proc, /home. Посмотреть пару произвольных файлов в /etc.
+tubalov@ubuntugb:~$ ll /etc
+total 1068
+drwxr-xr-x 127 root root   12288 янв 29 00:44 ./
+drwxr-xr-x  20 root root    4096 янв 23 12:38 ../
+drwxr-xr-x   3 root root    4096 июл 31 19:31 acpi/
+-rw-r--r--   1 root root    3028 июл 31 19:27 adduser.conf
+drwxr-xr-x   3 root root    4096 июл 31 19:28 alsa/
+drwxr-xr-x   2 root root    4096 янв 26 19:53 alternatives/
+-rw-r--r--   1 root root     401 июл 16  2019 anacrontab
+-rw-r--r--   1 root root     433 окт  2  2017 apg.conf
+drwxr-xr-x   5 root root    4096 июл 31 19:28 apm/
+drwxr-xr-x   3 root root    4096 июл 31 19:30 apparmor/
+drwxr-xr-x   7 root root    4096 янв 29 00:44 apparmor.d/
+drwxr-xr-x   4 root root    4096 янв 29 00:44 apport/
+-rw-r--r--   1 root root     769 янв 18  2020 appstream.conf
+drwxr-xr-x   7 root root    4096 янв 23 12:48 apt/
+drwxr-xr-x   3 root root    4096 июл 31 19:31 avahi/
+-rw-r--r--   1 root root    2319 фев 25  2020 bash.bashrc
+-rw-r--r--   1 root root      45 янв 26  2020 bash_completion
+drwxr-xr-x   2 root root    4096 янв 29 00:44 bash_completion.d/
+-rw-r--r--   1 root root     367 апр 14  2020 bindresvport.blacklist
+drwxr-xr-x   2 root root    4096 апр 22  2020 binfmt.d/
+drwxr-xr-x   2 root root    4096 июл 31 19:30 bluetooth/
+-rw-r-----   1 root root      33 июл 31 19:31 brlapi.key
+drwxr-xr-x   7 root root    4096 июл 31 19:30 brltty/
+-rw-r--r--   1 root root   26916 мар  3  2020 brltty.conf
+drwxr-xr-x   3 root root    4096 июл 31 19:27 ca-certificates/
+-rw-r--r--   1 root root    6505 янв 29 00:14 ca-certificates.conf
+-rw-r--r--   1 root root    5714 июл 31 19:27 ca-certificates.conf.dpkg-old
+drwxr-xr-x   2 root root    4096 июл 31 19:30 calendar/
+drwxr-s---   2 root dip     4096 янв 29 00:21 chatscripts/
+drwxr-xr-x   2 root root    4096 янв 23 12:39 console-setup/
+drwxr-xr-x   2 root root    4096 июл 31 19:31 cracklib/
+drwxr-xr-x   2 root root    4096 янв 23 12:43 cron.d/
+drwxr-xr-x   2 root root    4096 янв 29 00:44 cron.daily/
+drwxr-xr-x   2 root root    4096 июл 31 19:27 cron.hourly/
+drwxr-xr-x   2 root root    4096 июл 31 19:30 cron.monthly/
+-rw-r--r--   1 root root    1042 фев 13  2020 crontab
+drwxr-xr-x   2 root root    4096 янв 29 00:44 cron.weekly/
+drwxr-xr-x   5 root lp      4096 янв 29 22:47 cups/
+drwxr-xr-x   2 root root    4096 янв 29 00:43 cupshelpers/
+drwxr-xr-x   4 root root    4096 июл 31 19:27 dbus-1/
+drwxr-xr-x   4 root root    4096 июл 31 19:29 dconf/
+-rw-r--r--   1 root root    2969 авг  3  2019 debconf.conf
+-rw-r--r--   1 root root      13 дек  5  2019 debian_version
+drwxr-xr-x   3 root root    4096 янв 29 00:44 default/
+-rw-r--r--   1 root root     604 сен 16  2018 deluser.conf
+drwxr-xr-x   2 root root    4096 июл 31 19:27 depmod.d/
+drwxr-xr-x   4 root root    4096 июл 31 19:27 dhcp/
+drwxr-xr-x   2 root root    4096 янв 23 12:43 dictionaries-common/
+drwxr-xr-x   4 root root    4096 июл 31 19:27 dpkg/
+-rw-r--r--   1 root root     685 фев 14  2020 e2scrub.conf
+drwxr-xr-x   3 root root    4096 июл 31 19:29 emacs/
+-rw-r--r--   1 root root     106 янв 29 00:37 environment
+drwxr-xr-x   2 root root    4096 июл 31 19:31 environment.d/
+-rw-r--r--   1 root root    1816 дек 27  2019 ethertypes
+drwxr-xr-x   3 root root    4096 янв 28 23:33 firefox/
+drwxr-xr-x   4 root root    4096 июл 31 19:31 fonts/
+-rw-r--r--   1 root root      20 фев 10  2020 fprintd.conf
+-rw-rw-r--   1 root root     665 янв 23 12:35 fstab
+-rw-r--r--   1 root root     280 июн 20  2014 fuse.conf
+drwxr-xr-x   3 root root    4096 июл 31 19:31 fwupd/
+-rw-r--r--   1 root root    2584 фев  1  2020 gai.conf
+-rw-r--r--   1 root root    4372 мая 18  2020 gamemode.ini
+drwxr-xr-x   2 root root    4096 янв 29 00:43 gdb/
+drwxr-xr-x   8 root root    4096 янв 28 23:41 gdm3/
+drwxr-xr-x   2 root root    4096 июл 31 19:31 geoclue/
+drwxr-xr-x   4 root root    4096 июл 31 19:29 ghostscript/
+drwxr-xr-x   3 root root    4096 июл 31 19:29 glvnd/
+drwxr-xr-x   2 root root    4096 июл 31 19:30 gnome/
+drwxr-xr-x   2 root root    4096 июл 31 19:31 groff/
+-rw-r--r--   1 root root    1066 янв 29 00:41 group
+-rw-r--r--   1 root root    1060 янв 23 13:19 group-
+drwxr-xr-x   2 root root    4096 янв 29 00:43 grub.d/
+-rw-r-----   1 root shadow   892 янв 29 00:41 gshadow
+-rw-r-----   1 root shadow   886 янв 23 13:19 gshadow-
+drwxr-xr-x   3 root root    4096 июл 31 19:28 gss/
+drwxr-xr-x   2 root root    4096 июл 31 19:30 gtk-2.0/
+drwxr-xr-x   2 root root    4096 июл 31 19:31 gtk-3.0/
+-rw-r--r--   1 root root    5060 авг 21  2019 hdparm.conf
+-rw-r--r--   1 root root      92 дек  5  2019 host.conf
+-rw-r--r--   1 root root       4 июл 31 19:33 hostid
+-rw-r--r--   1 root root       9 янв 23 12:38 hostname
+-rw-r--r--   1 root root     223 янв 23 12:38 hosts
+-rw-r--r--   1 root root     411 июл 31 19:30 hosts.allow
+-rw-r--r--   1 root root     711 июл 31 19:30 hosts.deny
+drwxr-xr-x   2 root root    4096 июл 31 19:31 hp/
+drwxr-xr-x   3 root root    4096 июл 31 19:30 ifplugd/
+drwxr-xr-x   2 root root    4096 янв 29 00:43 init/
+drwxr-xr-x   2 root root    4096 янв 29 00:44 init.d/
+drwxr-xr-x   5 root root    4096 янв 29 00:44 initramfs-tools/
+-rw-r--r--   1 root root    1748 фев 25  2020 inputrc
+drwxr-xr-x   2 root root    4096 янв 28 23:41 insserv.conf.d/
+drwxr-xr-x   4 root root    4096 июл 31 19:27 iproute2/
+-rw-r--r--   1 root root      26 янв 27 12:40 issue
+-rw-r--r--   1 root root      19 янв 27 12:40 issue.net
+drwxr-xr-x   6 root root    4096 июл 31 19:30 kernel/
+-rw-r--r--   1 root root     110 янв 23 12:40 kernel-img.conf
+-rw-r--r--   1 root root    1308 дек  2  2017 kerneloops.conf
+drwxr-xr-x   2 root root    4096 янв 28 23:55 ldap/
+-rw-r--r--   1 root root   57006 янв 29 00:44 ld.so.cache
+-rw-r--r--   1 root root      34 апр 14  2020 ld.so.conf
+drwxr-xr-x   2 root root    4096 янв 29 00:37 ld.so.conf.d/
+-rw-r--r--   1 root root     267 дек  5  2019 legal
+-rw-r--r--   1 root root      27 янв 18  2018 libao.conf
+-rw-r--r--   1 root root     191 фев 18  2020 libaudit.conf
+drwxr-xr-x   3 root root    4096 июл 31 19:29 libblockdev/
+drwxr-xr-x   2 root root    4096 июл 31 19:30 libnl-3/
+drwxr-xr-x   2 root root    4096 июн 26  2019 libpaper.d/
+-rw-r--r--   1 root root    2996 апр 14  2020 locale.alias
+-rw-r--r--   1 root root    9438 янв 29 00:41 locale.gen
+lrwxrwxrwx   1 root root      33 янв 29 00:20 localtime -> /usr/share/zoneinfo/Europe/Moscow
+drwxr-xr-x   4 root root    4096 июл 31 19:29 logcheck/
+-rw-r--r--   1 root root   10550 фев  7  2020 login.defs
+-rw-r--r--   1 root root     533 янв 21  2019 logrotate.conf
+drwxr-xr-x   2 root root    4096 янв 29 00:44 logrotate.d/
+-rw-r--r--   1 root root     104 янв 27 12:38 lsb-release
+-rw-r--r--   1 root root   14867 фев  1  2019 ltrace.conf
+-r--r--r--   1 root root      33 янв 23 13:19 machine-id
+-rw-r--r--   1 root root     111 янв 16  2020 magic
+-rw-r--r--   1 root root     111 янв 16  2020 magic.mime
+-rw-r--r--   1 root root   16329 янв 29 00:44 mailcap
+-rw-r--r--   1 root root     449 окт 19  2019 mailcap.order
+-rw-r--r--   1 root root    5215 фев 25  2020 manpath.config
+-rw-r--r--   1 root root   24546 окт 19  2019 mime.types
+-rw-r--r--   1 root root     808 фев 14  2020 mke2fs.conf
+drwxr-xr-x   2 root root    4096 янв 29 00:07 modprobe.d/
+-rw-r--r--   1 root root     195 июл 31 19:27 modules
+drwxr-xr-x   2 root root    4096 янв 29 00:37 modules-load.d/
+lrwxrwxrwx   1 root root      19 янв 23 12:39 mtab -> ../proc/self/mounts
+-rw-r--r--   1 root root     624 мар 22  2020 mtools.conf
+drwxr-xr-x   3 root root    4096 июл 31 19:30 mysql/
+-rw-r--r--   1 root root   10037 фев  7  2020 nanorc
+drwxr-xr-x   2 root root    4096 июл 31 19:35 netplan/
+drwxr-xr-x   6 root root    4096 июл 31 19:30 network/
+drwxr-xr-x   8 root root    4096 июл 31 19:27 networkd-dispatcher/
+drwxr-xr-x   7 root root    4096 янв 29 00:44 NetworkManager/
+-rw-r--r--   1 root root      91 дек  5  2019 networks
+drwxr-xr-x   2 root root    4096 июл 31 19:27 newt/
+-rw-r--r--   1 root root     542 июл 31 19:31 nsswitch.conf
+drwxr-xr-x   4 root root    4096 июл 31 19:31 openvpn/
+drwxr-xr-x   2 root root    4096 июл 31 19:27 opt/
+lrwxrwxrwx   1 root root      21 янв 27 12:40 os-release -> ../usr/lib/os-release
+drwxr-xr-x   2 root root    4096 янв 29 00:09 PackageKit/
+-rw-r--r--   1 root root     552 дек 17  2019 pam.conf
+drwxr-xr-x   2 root root    4096 янв 29 00:44 pam.d/
+-rw-rw-r--   1 root root       3 янв 23 12:39 papersize
+-rw-r--r--   1 root root    2790 янв 26 19:11 passwd
+-rw-r--r--   1 root root    2790 янв 26 19:11 passwd-
+drwxr-xr-x   2 root root    4096 июл 31 19:30 pcmcia/
+drwxr-xr-x   3 root root    4096 июл 31 19:28 perl/
+drwxr-xr-x   4 root root    4096 июл 31 19:29 pki/
+drwxr-xr-x   3 root root    4096 июл 31 19:29 pm/
+-rw-r--r--   1 root root    7649 июл 31 19:31 pnm2ppa.conf
+drwxr-xr-x   4 root root    4096 июл 31 19:28 polkit-1/
+-rw-rw-r--   1 root root     350 янв 23 12:39 popularity-contest.conf
+drwxr-xr-x   7 root dip     4096 янв 29 00:21 ppp/
+-rw-r--r--   1 root root     581 дек  5  2019 profile
+drwxr-xr-x   2 root root    4096 янв 29 00:44 profile.d/
+-rw-r--r--   1 root root    2932 апр  2  2013 protocols
+drwxr-xr-x   3 root root    4096 янв 29 00:43 pulse/
+-rw-------   1 root root       0 июл 31 19:27 .pwd.lock
+drwxr-xr-x   2 root root    4096 июл 31 19:27 python3/
+drwxr-xr-x   2 root root    4096 янв 28 23:36 python3.8/
+drwxr-xr-x   2 root root    4096 янв 23 12:43 rc0.d/
+drwxr-xr-x   2 root root    4096 янв 23 12:43 rc1.d/
+drwxr-xr-x   2 root root    4096 янв 26 19:11 rc2.d/
+drwxr-xr-x   2 root root    4096 янв 26 19:11 rc3.d/
+drwxr-xr-x   2 root root    4096 янв 26 19:11 rc4.d/
+drwxr-xr-x   2 root root    4096 янв 26 19:11 rc5.d/
+drwxr-xr-x   2 root root    4096 янв 23 12:43 rc6.d/
+drwxr-xr-x   2 root root    4096 янв 23 12:43 rcS.d/
+lrwxrwxrwx   1 root root      39 янв 23 12:38 resolv.conf -> ../run/systemd/resolve/stub-resolv.conf
+lrwxrwxrwx   1 root root      13 дек 16 04:38 rmt -> /usr/sbin/rmt*
+-rw-r--r--   1 root root     887 апр  1  2013 rpc
+-rw-r--r--   1 root root    1382 фев 11  2020 rsyslog.conf
+drwxr-xr-x   2 root root    4096 июл 31 19:31 rsyslog.d/
+-rw-r--r--   1 root root    5211 мар 11  2020 rygel.conf
+drwxr-xr-x   3 root root    4096 янв 29 00:44 sane.d/
+drwxr-xr-x   4 root root    4096 янв 29 00:37 security/
+drwxr-xr-x   2 root root    4096 июл 31 19:27 selinux/
+-rw-r--r--   1 root root   10593 ноя  6  2019 sensors3.conf
+drwxr-xr-x   2 root root    4096 июл 31 19:30 sensors.d/
+-rw-r--r--   1 root root   14464 фев 17  2020 services
+drwxr-xr-x   3 root root    4096 июл 31 19:31 sgml/
+-rw-r-----   1 root shadow  1463 янв 26 19:11 shadow
+-rw-r-----   1 root shadow  1463 янв 26 19:11 shadow-
+-rw-r--r--   1 root root     116 июл 31 19:27 shells
+drwxr-xr-x   2 root root    4096 июл 31 19:27 skel/
+drwxr-xr-x   2 root root    4096 янв 28 23:34 snmp/
+drwxr-xr-x   4 root root    4096 июл 31 19:31 speech-dispatcher/
+drwxr-xr-x   4 root root    4096 янв 26 19:11 ssh/
+drwxr-xr-x   4 root root    4096 янв 28 23:58 ssl/
+-rw-r--r--   1 root root      21 янв 23 12:39 subgid
+-rw-r--r--   1 root root       0 июл 31 19:27 subgid-
+-rw-r--r--   1 root root      21 янв 23 12:39 subuid
+-rw-r--r--   1 root root       0 июл 31 19:27 subuid-
+-r--r-----   1 root root     755 фев  3  2020 sudoers
+drwxr-xr-x   2 root root    4096 янв 29 00:43 sudoers.d/
+-rw-r--r--   1 root root    2351 фев 14  2020 sysctl.conf
+drwxr-xr-x   2 root root    4096 янв 29 00:37 sysctl.d/
+drwxr-xr-x   5 root root    4096 янв 29 00:44 systemd/
+drwxr-xr-x   2 root root    4096 июл 31 19:27 terminfo/
+drwxr-xr-x   2 root root    4096 янв 29 00:43 thermald/
+-rw-r--r--   1 root root      14 янв 29 00:20 timezone
+drwxr-xr-x   2 root root    4096 апр 22  2020 tmpfiles.d/
+drwxr-xr-x   2 root root    4096 июл 31 19:27 ubuntu-advantage/
+-rw-r--r--   1 root root    1260 дек 14  2018 ucf.conf
+drwxr-xr-x   4 root root    4096 янв 23 12:47 udev/
+drwxr-xr-x   2 root root    4096 июл 31 19:31 udisks2/
+drwxr-xr-x   3 root root    4096 июл 31 19:31 ufw/
+drwxr-xr-x   3 root root    4096 янв 29 00:44 update-manager/
+drwxr-xr-x   2 root root    4096 янв 29 00:44 update-motd.d/
+drwxr-xr-x   2 root root    4096 апр  2  2020 update-notifier/
+drwxr-xr-x   2 root root    4096 июл 31 19:31 UPower/
+-rw-r--r--   1 root root    1523 фев 10  2020 usb_modeswitch.conf
+drwxr-xr-x   2 root root    4096 фев 24  2020 usb_modeswitch.d/
+drwxr-xr-x   2 root root    4096 июл 31 19:27 vim/
+lrwxrwxrwx   1 root root      23 янв 23 12:35 vtrgb -> /etc/alternatives/vtrgb
+drwxr-xr-x   5 root root    4096 июл 31 19:29 vulkan/
+-rw-r--r--   1 root root    4942 июл 24  2019 wgetrc
+drwxr-xr-x   2 root root    4096 июл 31 19:31 wpa_supplicant/
+drwxr-xr-x  11 root root    4096 июл 31 19:31 X11/
+-rw-r--r--   1 root root     642 сен 24  2019 xattr.conf
+drwxr-xr-x   6 root root    4096 июл 31 19:29 xdg/
+drwxr-xr-x   2 root root    4096 июл 31 19:31 xml/
+-rw-r--r--   1 root root     477 окт  7  2019 zsh_command_not_found
+
+tubalov@ubuntugb:~$ ll /proc
+total 4
+dr-xr-xr-x 222 root             root                           0 янв 29 22:46 ./
+drwxr-xr-x  20 root             root                        4096 янв 23 12:38 ../
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 1/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 10/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 100/
+dr-xr-xr-x   9 root             root                           0 янв 29 23:53 1005/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 101/
+dr-xr-xr-x   9 root             root                           0 янв 29 23:53 1029/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 103/
+dr-xr-xr-x   9 root             root                           0 янв 29 23:53 1033/
+dr-xr-xr-x   9 root             root                           0 янв 29 23:53 1037/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 104/
+dr-xr-xr-x   9 root             root                           0 янв 29 23:53 1048/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 105/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 107/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 108/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 23:49 1082/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 109/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 23:53 1096/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 11/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 110/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 111/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 112/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 113/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 114/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 115/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 116/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 117/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 118/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 119/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 12/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 120/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 121/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 122/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 13/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 131/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 134/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 135/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 14/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 140/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 15/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 16/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 17/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 18/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 191/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 192/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 193/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 194/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 195/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 196/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 197/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 198/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 199/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 2/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 20/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 200/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 201/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 202/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 203/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 21/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 212/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 22/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 23/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 231/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 233/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 234/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 235/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 24/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 247/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 26/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 27/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 275/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 28/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 29/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 3/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 30/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 301/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:50 306/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:50 315/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 32/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 33/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 34/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:50 342/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:50 345/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:50 346/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:50 347/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:50 348/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:50 349/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 35/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:50 350/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:50 351/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:50 357/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 36/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 37/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 38/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 39/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 4/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 40/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 41/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 42/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:50 420/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 43/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 44/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 50/
+dr-xr-xr-x   9 systemd-resolve  systemd-resolve                0 янв 29 22:46 501/
+dr-xr-xr-x   9 systemd-timesync systemd-timesync               0 янв 29 22:46 502/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 533/
+dr-xr-xr-x   9 avahi            avahi                          0 янв 29 22:46 536/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 539/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 540/
+dr-xr-xr-x   9 messagebus       messagebus                     0 янв 29 22:46 541/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 542/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 547/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 548/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 549/
+dr-xr-xr-x   9 syslog           syslog                         0 янв 29 22:46 551/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 553/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 557/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 56/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 560/
+dr-xr-xr-x   9 avahi            avahi                          0 янв 29 22:50 565/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 591/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 6/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 600/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 610/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 617/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 62/
+dr-xr-xr-x   9 whoopsie         whoopsie                       0 янв 29 22:46 633/
+dr-xr-xr-x   9 kernoops         adm                            0 янв 29 22:46 638/
+dr-xr-xr-x   9 kernoops         adm                            0 янв 29 22:46 640/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 657/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:47 728/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:50 733/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:47 735/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 22:47 738/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 22:47 739/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 22:47 744/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 22:47 746/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 22:47 765/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 22:47 771/
+dr-xr-xr-x   9 rtkit            rtkit                          0 янв 29 22:47 793/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 22:47 796/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 8/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 22:47 809/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:47 814/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 22:50 865/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 22:47 868/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 22:47 880/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 22:47 884/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 22:47 891/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 22:47 896/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 9/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 22:47 901/
+dr-xr-xr-x   9 tubalov          tubalov                        0 янв 29 22:47 906/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:47 911/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 93/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 94/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 95/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 96/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 97/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 98/
+dr-xr-xr-x   9 root             root                           0 янв 29 22:46 99/
+dr-xr-xr-x   3 root             root                           0 янв 29 22:46 acpi/
+-r--r--r--   1 root             root                           0 янв 29 23:53 bootconfig
+-r--r--r--   1 root             root                           0 янв 29 23:53 buddyinfo
+dr-xr-xr-x   4 root             root                           0 янв 29 22:46 bus/
+-r--r--r--   1 root             root                           0 янв 29 22:46 cgroups
+-r--r--r--   1 root             root                           0 янв 29 22:46 cmdline
+-r--r--r--   1 root             root                           0 янв 29 23:53 consoles
+-r--r--r--   1 root             root                           0 янв 29 23:53 cpuinfo
+-r--r--r--   1 root             root                           0 янв 29 23:53 crypto
+-r--r--r--   1 root             root                           0 янв 29 22:46 devices
+-r--r--r--   1 root             root                           0 янв 29 23:53 diskstats
+-r--r--r--   1 root             root                           0 янв 29 23:53 dma
+dr-xr-xr-x   3 root             root                           0 янв 29 23:53 driver/
+dr-xr-xr-x   3 root             root                           0 янв 29 23:53 dynamic_debug/
+-r--r--r--   1 root             root                           0 янв 29 23:53 execdomains
+-r--r--r--   1 root             root                           0 янв 29 23:53 fb
+-r--r--r--   1 root             root                           0 янв 29 22:46 filesystems
+dr-xr-xr-x   5 root             root                           0 янв 29 22:46 fs/
+-r--r--r--   1 root             root                           0 янв 29 22:46 interrupts
+-r--r--r--   1 root             root                           0 янв 29 23:53 iomem
+-r--r--r--   1 root             root                           0 янв 29 23:53 ioports
+dr-xr-xr-x  39 root             root                           0 янв 29 22:46 irq/
+-r--r--r--   1 root             root                           0 янв 29 22:46 kallsyms
+-r--------   1 root             root             140737477885952 янв 29 22:46 kcore
+-r--r--r--   1 root             root                           0 янв 29 23:53 keys
+-r--r--r--   1 root             root                           0 янв 29 23:53 key-users
+-r--------   1 root             root                           0 янв 29 22:46 kmsg
+-r--------   1 root             root                           0 янв 29 23:53 kpagecgroup
+-r--------   1 root             root                           0 янв 29 23:53 kpagecount
+-r--------   1 root             root                           0 янв 29 23:53 kpageflags
+-r--r--r--   1 root             root                           0 янв 29 23:53 loadavg
+-r--r--r--   1 root             root                           0 янв 29 23:53 locks
+-r--r--r--   1 root             root                           0 янв 29 23:53 mdstat
+-r--r--r--   1 root             root                           0 янв 29 22:46 meminfo
+-r--r--r--   1 root             root                           0 янв 29 23:53 misc
+-r--r--r--   1 root             root                           0 янв 29 23:53 modules
+lrwxrwxrwx   1 root             root                          11 янв 29 22:46 mounts -> self/mounts
+-rw-r--r--   1 root             root                           0 янв 29 22:46 mtrr
+lrwxrwxrwx   1 root             root                           8 янв 29 22:46 net -> self/net/
+-r--------   1 root             root                           0 янв 29 23:53 pagetypeinfo
+-r--r--r--   1 root             root                           0 янв 29 23:53 partitions
+dr-xr-xr-x   5 root             root                           0 янв 29 23:53 pressure/
+-r--r--r--   1 root             root                           0 янв 29 23:53 sched_debug
+-r--r--r--   1 root             root                           0 янв 29 23:53 schedstat
+dr-xr-xr-x   5 root             root                           0 янв 29 22:46 scsi/
+lrwxrwxrwx   1 root             root                           0 янв 29 22:46 self -> 1096/
+-r--------   1 root             root                           0 янв 29 23:53 slabinfo
+-r--r--r--   1 root             root                           0 янв 29 23:53 softirqs
+-r--r--r--   1 root             root                           0 янв 29 22:46 stat
+-r--r--r--   1 root             root                           0 янв 29 22:46 swaps
+dr-xr-xr-x   1 root             root                           0 янв 29 22:46 sys/
+--w-------   1 root             root                           0 янв 29 22:46 sysrq-trigger
+dr-xr-xr-x   5 root             root                           0 янв 29 23:53 sysvipc/
+lrwxrwxrwx   1 root             root                           0 янв 29 22:46 thread-self -> 1096/task/1096/
+-r--------   1 root             root                           0 янв 29 23:53 timer_list
+dr-xr-xr-x   6 root             root                           0 янв 29 22:50 tty/
+-r--r--r--   1 root             root                           0 янв 29 22:46 uptime
+-r--r--r--   1 root             root                           0 янв 29 22:46 version
+-r--r--r--   1 root             root                           0 янв 29 23:53 version_signature
+-r--------   1 root             root                           0 янв 29 23:53 vmallocinfo
+-r--r--r--   1 root             root                           0 янв 29 23:53 vmstat
+-r--r--r--   1 root             root                           0 янв 29 23:53 zoneinfo
+
+tubalov@ubuntugb:~$ ll /home
+total 12
+drwxr-xr-x  3 root    root    4096 янв 23 12:39 ./
+drwxr-xr-x 20 root    root    4096 янв 23 12:38 ../
+drwxr-xr-x 14 tubalov tubalov 4096 янв 29 23:50 tubalov/
+
+tubalov@ubuntugb:~$ cat /etc/fstab
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/vda5 during installation
+UUID=d375bb53-281c-4189-a770-20162ae0db05 /               ext4    errors=remount-ro 0       1
+# /boot/efi was on /dev/vda1 during installation
+UUID=DBC8-FDB3  /boot/efi       vfat    umask=0077      0       1
+/swapfile                                 none            swap    sw              0       0
+
+tubalov@ubuntugb:~$ cat /etc/hosts
+127.0.0.1       localhost
+127.0.1.1       ubuntugb
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+### 2. Выяснить, для чего предназначена команда cat. Используя данную команду, создать два файла с данными, а затем объединить их. Просмотреть содержимое созданного файла. Переименовать файл, дав ему новое имя.
+tubalov@ubuntugb:~$ cat > file01
+regular text file 01
+tubalov@ubuntugb:~$ cat file01
+regular text file 01
+tubalov@ubuntugb:~$ cat > file02
+regular text file 02
+tubalov@ubuntugb:~$ cat file02
+regular text file 02
+tubalov@ubuntugb:~$ cat file01 file02 > file03
+tubalov@ubuntugb:~$ cat file03
+regular text file 01
+regular text file 02
+tubalov@ubuntugb:~$ mv file03 file03_new
+
+### 3. Создать несколько файлов. Создать директорию, переместить файл туда. Удалить все созданные в этом и предыдущем задании директории и файлы.
+tubalov@ubuntugb:~$ cat > file04
+test file 04
+tubalov@ubuntugb:~$ cat file04
+test file 04
+tubalov@ubuntugb:~$ cat > file05
+test file 05
+tubalov@ubuntugb:~$ cat file05
+test file 05
+tubalov@ubuntugb:~$ mkdir test_files
+tubalov@ubuntugb:~$ mv file04 file05 test_files/
+tubalov@ubuntugb:~$ ll test_files/
+total 16
+drwxrwxr-x  2 tubalov tubalov 4096 янв 30 00:08 ./
+drwxr-xr-x 15 tubalov tubalov 4096 янв 30 00:08 ../
+-rw-rw-r--  1 tubalov tubalov   13 янв 30 00:06 file04
+-rw-rw-r--  1 tubalov tubalov   13 янв 30 00:07 file05
+tubalov@ubuntugb:~$ ll
+total 88
+drwxr-xr-x 15 tubalov tubalov 4096 янв 30 00:08 ./
+drwxr-xr-x  3 root    root    4096 янв 23 12:39 ../
+-rw-------  1 tubalov tubalov  412 янв 29 22:46 .bash_history
+-rw-r--r--  1 tubalov tubalov  220 янв 23 12:39 .bash_logout
+-rw-r--r--  1 tubalov tubalov 3771 янв 23 12:39 .bashrc
+drwx------ 12 tubalov tubalov 4096 янв 29 22:40 .cache/
+drwx------ 12 tubalov tubalov 4096 янв 28 23:39 .config/
+drwxr-xr-x  2 tubalov tubalov 4096 янв 23 14:14 Desktop/
+drwxr-xr-x  2 tubalov tubalov 4096 янв 23 14:14 Documents/
+drwxr-xr-x  2 tubalov tubalov 4096 янв 23 14:14 Downloads/
+-rw-rw-r--  1 tubalov tubalov   21 янв 30 00:03 file01
+-rw-rw-r--  1 tubalov tubalov   21 янв 30 00:03 file02
+-rw-rw-r--  1 tubalov tubalov   42 янв 30 00:04 file03_new
+drwx------  3 tubalov tubalov 4096 янв 23 14:14 .gnupg/
+drwx------  3 tubalov tubalov 4096 янв 23 14:14 .local/
+drwxr-xr-x  2 tubalov tubalov 4096 янв 23 14:14 Music/
+drwxr-xr-x  2 tubalov tubalov 4096 янв 23 14:14 Pictures/
+-rw-r--r--  1 tubalov tubalov  807 янв 23 12:39 .profile
+drwxr-xr-x  2 tubalov tubalov 4096 янв 23 14:14 Public/
+-rw-r--r--  1 tubalov tubalov    0 янв 26 19:10 .sudo_as_admin_successful
+drwxr-xr-x  2 tubalov tubalov 4096 янв 23 14:14 Templates/
+drwxrwxr-x  2 tubalov tubalov 4096 янв 30 00:08 test_files/
+drwxr-xr-x  2 tubalov tubalov 4096 янв 23 14:14 Videos/
+tubalov@ubuntugb:~$ rm file*
+tubalov@ubuntugb:~$ rm -r test_files/
+
+### 4. В ОС Linux скрытыми файлами считаются те, имена которых начинаются с символа “.”. Сколько скрытых файлов в вашем домашнем каталоге? (Использовать конвейер. Подсказка: для подсчета количества строк можно использовать wc.)
+tubalov@ubuntugb:~$ pwd
+/home/tubalov
+tubalov@ubuntugb:~$ ls -ld .* | grep '^-'
+-rw-------  1 tubalov tubalov  412 янв 29 22:46 .bash_history
+-rw-r--r--  1 tubalov tubalov  220 янв 23 12:39 .bash_logout
+-rw-r--r--  1 tubalov tubalov 3771 янв 23 12:39 .bashrc
+-rw-r--r--  1 tubalov tubalov  807 янв 23 12:39 .profile
+-rw-r--r--  1 tubalov tubalov    0 янв 26 19:10 .sudo_as_admin_successful
+tubalov@ubuntugb:~$ ls -ld .* | grep '^-' | wc -l
+5
+
+### 5. Попробовать вывести с помощью cat содержимое всех файлов в директории /etc. Направить ошибки в отдельный файл в вашей домашней директории. Сколько файлов, которые не удалось посмотреть, оказалось в списке?
+tubalov@ubuntugb:~$ cat /etc/* 2>> out | cat > /dev/null
+tubalov@ubuntugb:~$ cat out | wc -l
+131
+
+### 6. Запустить в одном терминале программу, а в другом терминале посмотреть PID процесса и остановить с помощью kill, посылая разные типы сигналов. Что происходит?
+### во всех 3-х случаях команда завершилась, в случае с сигналом -9 безусловно
+tubalov@ubuntugb:~$ ps aux | grep top
+tubalov     1768  0.5  0.0  11880  3568 pts/1    S+   00:47   0:00 top
+tubalov     1771  0.0  0.0   9044   724 pts/0    S+   00:47   0:00 grep --color=auto top
+tubalov@ubuntugb:~$ kill -1 1768
+tubalov@ubuntugb:~$ ps aux | grep top
+tubalov     1773  0.6  0.0  11880  3620 pts/1    S+   00:49   0:00 top
+tubalov     1775  0.0  0.0   9044   732 pts/0    S+   00:49   0:00 grep --color=auto top
+tubalov@ubuntugb:~$ kill -9 1773
+tubalov@ubuntugb:~$ ps aux | grep top
+tubalov     1776  0.6  0.0  11880  3632 pts/1    S+   00:50   0:00 top
+tubalov     1778  0.0  0.0   9044   732 pts/0    S+   00:50   0:00 grep --color=auto top
+tubalov@ubuntugb:~$ kill -15 1776
+
+
+### 7. * Отобразить в /dev список устройств, которые в настоящее время используются вашим UID (для этого используется команда lsof). Организовать конвейер через less, чтобы посмотреть их должным образом.
+tubalov@ubuntugb:~$ sudo less | lsof +D /dev/ | grep tubalov | less
+systemd    738 tubalov    0r   CHR    1,3      0t0    6 /dev/null
+pulseaudi  744 tubalov    0r   CHR    1,3      0t0    6 /dev/null
+tracker-m  746 tubalov    0r   CHR    1,3      0t0    6 /dev/null
+dbus-daem  765 tubalov    0u   CHR    1,3      0t0    6 /dev/null
+gvfsd      771 tubalov    0r   CHR    1,3      0t0    6 /dev/null
+gvfsd-fus  796 tubalov    0r   CHR    1,3      0t0    6 /dev/null
+gvfsd-fus  796 tubalov    3u   CHR 10,229      0t0   87 /dev/fuse
+gvfs-udis  809 tubalov    0r   CHR    1,3      0t0    6 /dev/null
+gvfs-goa-  880 tubalov    0r   CHR    1,3      0t0    6 /dev/null
+goa-daemo  884 tubalov    0u   CHR    1,3      0t0    6 /dev/null
+goa-ident  891 tubalov    0u   CHR    1,3      0t0    6 /dev/null
+gvfs-gpho  896 tubalov    0r   CHR    1,3      0t0    6 /dev/null
+gvfs-afc-  901 tubalov    0r   CHR    1,3      0t0    6 /dev/null
+gvfs-mtp-  906 tubalov    0r   CHR    1,3      0t0    6 /dev/null
+gvfsd-met 1082 tubalov    0r   CHR    1,3      0t0    6 /dev/null
+less      1833 tubalov    3r   CHR    5,0      0t0   13 /dev/tty
+
+### 8. * Cоздать директорию для хранения фотографий. В ней должны быть директории по годам (например, за последние 5 лет), и в каждой директории года — по директории для каждого месяца.
+tubalov@ubuntugb:~$ mkdir photo
+tubalov@ubuntugb:~$ cd photo
+tubalov@ubuntugb:~/photo$ mkdir -p 20{21..17}/{01..12}
+tubalov@ubuntugb:~/photo$ ll 2019
+total 56
+drwxrwxr-x 14 tubalov tubalov 4096 янв 30 01:11 ./
+drwxrwxr-x  7 tubalov tubalov 4096 янв 30 01:11 ../
+drwxrwxr-x  2 tubalov tubalov 4096 янв 30 01:11 01/
+drwxrwxr-x  2 tubalov tubalov 4096 янв 30 01:11 02/
+drwxrwxr-x  2 tubalov tubalov 4096 янв 30 01:11 03/
+drwxrwxr-x  2 tubalov tubalov 4096 янв 30 01:11 04/
+drwxrwxr-x  2 tubalov tubalov 4096 янв 30 01:11 05/
+drwxrwxr-x  2 tubalov tubalov 4096 янв 30 01:11 06/
+drwxrwxr-x  2 tubalov tubalov 4096 янв 30 01:11 07/
+drwxrwxr-x  2 tubalov tubalov 4096 янв 30 01:11 08/
+drwxrwxr-x  2 tubalov tubalov 4096 янв 30 01:11 09/
+drwxrwxr-x  2 tubalov tubalov 4096 янв 30 01:11 10/
+drwxrwxr-x  2 tubalov tubalov 4096 янв 30 01:11 11/
+drwxrwxr-x  2 tubalov tubalov 4096 янв 30 01:11 12/
+
+### 9. * Заполнить директории файлами вида ГГГГММДДНН.txt. Внутри файла должно быть его имя. Например: 2018011301.txt, 2018011302.txt.
+### скрипт для заполнения + создание каталогов из задачи 8
+#!/bin/bash
+for year in {2017..2021}
+do
+mkdir $year
+cd $year
+mkdir -p {01..12}
+
+for month in {01..12}
+do
+cd $month
+for day in {01..30}
+do
+for number in {01..99}
+do
+echo  $year$month$day$number.txt > $year$month$day$number.txt
+done
+done
+cd ..
+done
+cd ..
+done
+
+tubalov@ubuntugb:~/test$ ./script89.sh
+tubalov@ubuntugb:~/test$ ll
+total 32
+drwxrwxr-x  7 tubalov tubalov 4096 янв 30 02:01 ./
+drwxr-xr-x 16 tubalov tubalov 4096 янв 30 01:45 ../
+drwxrwxr-x 14 tubalov tubalov 4096 янв 30 02:00 2017/
+drwxrwxr-x 14 tubalov tubalov 4096 янв 30 02:01 2018/
+drwxrwxr-x 14 tubalov tubalov 4096 янв 30 02:01 2019/
+drwxrwxr-x 14 tubalov tubalov 4096 янв 30 02:01 2020/
+drwxrwxr-x 14 tubalov tubalov 4096 янв 30 02:01 2021/
+-rwxrwxr-x  1 tubalov tubalov  269 янв 30 02:00 script89.sh*
+tubalov@ubuntugb:~/test$ cat 2019/11/2019112496.txt
+2019112496.txt
+tubalov@ubuntugb:~/test$
