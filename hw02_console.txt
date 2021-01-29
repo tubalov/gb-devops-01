@@ -579,23 +579,38 @@ tubalov@ubuntugb:~$ kill -15 1776
 
 
 ### 7. * Отобразить в /dev список устройств, которые в настоящее время используются вашим UID (для этого используется команда lsof). Организовать конвейер через less, чтобы посмотреть их должным образом.
-tubalov@ubuntugb:~$ sudo less | lsof +D /dev/ | grep tubalov | less
-systemd    738 tubalov    0r   CHR    1,3      0t0    6 /dev/null
-pulseaudi  744 tubalov    0r   CHR    1,3      0t0    6 /dev/null
-tracker-m  746 tubalov    0r   CHR    1,3      0t0    6 /dev/null
-dbus-daem  765 tubalov    0u   CHR    1,3      0t0    6 /dev/null
-gvfsd      771 tubalov    0r   CHR    1,3      0t0    6 /dev/null
-gvfsd-fus  796 tubalov    0r   CHR    1,3      0t0    6 /dev/null
-gvfsd-fus  796 tubalov    3u   CHR 10,229      0t0   87 /dev/fuse
-gvfs-udis  809 tubalov    0r   CHR    1,3      0t0    6 /dev/null
-gvfs-goa-  880 tubalov    0r   CHR    1,3      0t0    6 /dev/null
-goa-daemo  884 tubalov    0u   CHR    1,3      0t0    6 /dev/null
-goa-ident  891 tubalov    0u   CHR    1,3      0t0    6 /dev/null
-gvfs-gpho  896 tubalov    0r   CHR    1,3      0t0    6 /dev/null
-gvfs-afc-  901 tubalov    0r   CHR    1,3      0t0    6 /dev/null
-gvfs-mtp-  906 tubalov    0r   CHR    1,3      0t0    6 /dev/null
-gvfsd-met 1082 tubalov    0r   CHR    1,3      0t0    6 /dev/null
-less      1833 tubalov    3r   CHR    5,0      0t0   13 /dev/tty
+tubalov@ubuntugb:~$ sudo lsof +D /dev/ | grep tubalov | less
+lsof: WARNING: can't stat() fuse.gvfsd-fuse file system /run/user/1000/gvfs
+      Output information may be incomplete.
+systemd     738          tubalov    0r   CHR    1,3      0t0    6 /dev/null
+(sd-pam)    739          tubalov    0r   CHR    1,3      0t0    6 /dev/null
+pulseaudi   744          tubalov    0r   CHR    1,3      0t0    6 /dev/null
+tracker-m   746          tubalov    0r   CHR    1,3      0t0    6 /dev/null
+dbus-daem   765          tubalov    0u   CHR    1,3      0t0    6 /dev/null
+gvfsd       771          tubalov    0r   CHR    1,3      0t0    6 /dev/null
+gvfsd-fus   796          tubalov    0r   CHR    1,3      0t0    6 /dev/null
+gvfsd-fus   796          tubalov    3u   CHR 10,229      0t0   87 /dev/fuse
+gvfs-udis   809          tubalov    0r   CHR    1,3      0t0    6 /dev/null
+sshd        865          tubalov    0u   CHR    1,3      0t0    6 /dev/null
+sshd        865          tubalov    1u   CHR    1,3      0t0    6 /dev/null
+sshd        865          tubalov    2u   CHR    1,3      0t0    6 /dev/null
+sshd        865          tubalov   10u   CHR    5,2      0t0   89 /dev/ptmx
+sshd        865          tubalov   12u   CHR    5,2      0t0   89 /dev/ptmx
+sshd        865          tubalov   13u   CHR    5,2      0t0   89 /dev/ptmx
+gvfs-goa-   880          tubalov    0r   CHR    1,3      0t0    6 /dev/null
+goa-daemo   884          tubalov    0u   CHR    1,3      0t0    6 /dev/null
+goa-ident   891          tubalov    0u   CHR    1,3      0t0    6 /dev/null
+gvfs-gpho   896          tubalov    0r   CHR    1,3      0t0    6 /dev/null
+gvfs-afc-   901          tubalov    0r   CHR    1,3      0t0    6 /dev/null
+gvfs-mtp-   906          tubalov    0r   CHR    1,3      0t0    6 /dev/null
+gvfsd-met  1082          tubalov    0r   CHR    1,3      0t0    6 /dev/null
+sshd       1738          tubalov    0u   CHR    1,3      0t0    6 /dev/null
+sshd       1738          tubalov    1u   CHR    1,3      0t0    6 /dev/null
+sshd       1738          tubalov    2u   CHR    1,3      0t0    6 /dev/null
+sshd       1738          tubalov   10u   CHR    5,2      0t0   89 /dev/ptmx
+sshd       1738          tubalov   12u   CHR    5,2      0t0   89 /dev/ptmx
+sshd       1738          tubalov   13u   CHR    5,2      0t0   89 /dev/ptmx
+less      38693          tubalov    3r   CHR    5,0      0t0   13 /dev/tty
 
 ### 8. * Cоздать директорию для хранения фотографий. В ней должны быть директории по годам (например, за последние 5 лет), и в каждой директории года — по директории для каждого месяца.
 tubalov@ubuntugb:~$ mkdir photo
