@@ -1,0 +1,124 @@
+### 1. Создать файл file1 и наполнить его произвольным содержимым. Скопировать его в file2. Создать символическую ссылку file3 на file1. Создать жесткую ссылку file4 на file1. Посмотреть, какие айноды у файлов. Удалить file1. Что стало с остальными созданными файлами? Попробовать вывести их на экран.
+
+tubalov@ubuntugb:~/hw03$ cat > file1
+file for hw03
+task01
+tubalov@ubuntugb:~/hw03$ cat file1
+file for hw03
+task01
+tubalov@ubuntugb:~/hw03$ cp file1 file2
+tubalov@ubuntugb:~/hw03$ ln -s file1 file3
+tubalov@ubuntugb:~/hw03$ ln file1 file4
+tubalov@ubuntugb:~/hw03$ ls -ila
+total 20
+264151 drwxrwxr-x  2 tubalov tubalov 4096 янв 30 12:19 .
+688462 drwxr-xr-x 16 tubalov tubalov 4096 янв 30 12:15 ..
+264152 -rw-rw-r--  2 tubalov tubalov   21 янв 30 12:16 file1
+264153 -rw-rw-r--  1 tubalov tubalov   21 янв 30 12:17 file2
+264157 lrwxrwxrwx  1 tubalov tubalov    5 янв 30 12:18 file3 -> file1
+264152 -rw-rw-r--  2 tubalov tubalov   21 янв 30 12:16 file4
+
+### у file1 и file2 айноды отличаются (разные файлы), у file1 и file4 идентичны, т.к. file4 это хардлинк
+
+tubalov@ubuntugb:~/hw03$ rm file1
+tubalov@ubuntugb:~/hw03$ cat file2
+file for hw03
+task01
+tubalov@ubuntugb:~/hw03$ cat file3
+cat: file3: No such file or directory
+tubalov@ubuntugb:~/hw03$ cat file4
+file for hw03
+task01
+tubalov@ubuntugb:~/hw03$ ll
+total 16
+drwxrwxr-x  2 tubalov tubalov 4096 янв 30 12:22 ./
+drwxr-xr-x 16 tubalov tubalov 4096 янв 30 12:15 ../
+-rw-rw-r--  1 tubalov tubalov   21 янв 30 12:17 file2
+lrwxrwxrwx  1 tubalov tubalov    5 янв 30 12:18 file3 -> file1
+-rw-rw-r--  1 tubalov tubalov   21 янв 30 12:16 file4
+
+### file2 не изменился, т.к. копия, file3 не открывается, т.к. это симлинк и ссылается на несуществующий файл, file4 открывается, т.к. это хардлинк
+
+### 2. Дать созданным файлам другие, произвольные имена. Создать новую символическую ссылку. Переместить ссылки в другую директорию.
+tubalov@ubuntugb:~/hw03$ mv file2 file6
+tubalov@ubuntugb:~/hw03$ cp file6 file7
+tubalov@ubuntugb:~/hw03$ ln -s file6 file8
+tubalov@ubuntugb:~/hw03$ ln file6 file9
+tubalov@ubuntugb:~/hw03$ mkdir newdir
+tubalov@ubuntugb:~/hw03$ mv file8 file9 newdir/
+tubalov@ubuntugb:~/hw03$ ll newdir/
+total 12
+drwxrwxr-x 2 tubalov tubalov 4096 янв 30 13:06 ./
+drwxrwxr-x 3 tubalov tubalov 4096 янв 30 13:06 ../
+lrwxrwxrwx 1 tubalov tubalov    5 янв 30 13:05 file8 -> file6
+-rw-rw-r-- 2 tubalov tubalov   21 янв 30 12:17 file9
+tubalov@ubuntugb:~/hw03$ cat newdir/file8
+cat: newdir/file8: No such file or directory
+tubalov@ubuntugb:~/hw03$ cat newdir/file9
+file for hw03
+task01
+
+### 3. Создать два произвольных файла. Первому присвоить права на чтение, запись для владельца и группы, только на чтение — для всех. Второму присвоить права на чтение, запись — только для владельца. Сделать это в численном и символьном виде.
+tubalov@ubuntugb:~/hw03$ touch file21
+tubalov@ubuntugb:~/hw03$ ls -l file21
+-rw-rw-r-- 1 tubalov tubalov 0 янв 30 18:27 file21
+tubalov@ubuntugb:~/hw03$ chmod 664 file21
+tubalov@ubuntugb:~/hw03$ ls -l file21
+-rw-rw-r-- 1 tubalov tubalov 0 янв 30 18:27 file21
+tubalov@ubuntugb:~/hw03$ chmod u=rw,g=rw,o=r file21
+tubalov@ubuntugb:~/hw03$ ls -l file21
+-rw-rw-r-- 1 tubalov tubalov 0 янв 30 18:27 file21
+
+tubalov@ubuntugb:~/hw03$ touch file22
+tubalov@ubuntugb:~/hw03$ chmod 600 file22
+tubalov@ubuntugb:~/hw03$ ls -l file22
+-rw------- 1 tubalov tubalov 0 янв 30 18:28 file22
+tubalov@ubuntugb:~/hw03$ chmod u=rw,g=-,o=- file22
+tubalov@ubuntugb:~/hw03$ ls -l file22
+-rw------- 1 tubalov tubalov 0 янв 30 18:28 file22
+
+### 4. Создать пользователя, обладающего возможностью выполнять действия от имени суперпользователя.
+tubalov@ubuntugb:~/hw03$ sudo useradd -m -G sudo admuser
+[sudo] password for tubalov:
+tubalov@ubuntugb:~/hw03$ grep admuser /etc/group
+sudo:x:27:tubalov,admuser
+admuser:x:1001:
+
+### 5. * Создать группу developer и несколько пользователей, входящих в нее. Создать директорию для совместной работы. Сделать так, чтобы созданные одними пользователями файлы могли изменять другие пользователи этой группы.
+tubalov@ubuntugb:~/hw03$ sudo groupadd developer
+tubalov@ubuntugb:~/hw03$ sudo useradd -m -G developer -s /bin/bash devuser01
+tubalov@ubuntugb:~/hw03$ sudo useradd -m -G developer -s /bin/bash devuser02
+tubalov@ubuntugb:~/hw03$ sudo passwd devuser01
+New password:
+Retype new password:
+passwd: password updated successfully
+tubalov@ubuntugb:~/hw03$ sudo passwd devuser02
+New password:
+Retype new password:
+passwd: password updated successfully
+
+tubalov@ubuntugb:~/hw03$ sudo mkdir /home/developer
+tubalov@ubuntugb:~/hw03$ sudo chmod 775 /home/developer
+tubalov@ubuntugb:~/hw03$ sudo chown root:developer  /home/developer
+tubalov@ubuntugb:~/hw03$ sudo chmod g+s /home/developer
+tubalov@ubuntugb:~/hw03$ ll /home | grep developer
+drwxrwsr-x  2 root      developer 4096 янв 30 19:23 developer/
+
+tubalov@ubuntugb:~/hw03$ su devuser01
+Password:
+devuser01@ubuntugb:/home/tubalov/hw03$ cat > /home/developer/devfile
+123
+devuser01@ubuntugb:/home/tubalov/hw03$ ll /home/developer
+total 12
+drwxrwsr-x 2 root      developer 4096 янв 30 19:23 ./
+drwxr-xr-x 7 root      root      4096 янв 30 18:57 ../
+-rw-rw-r-- 1 devuser01 developer    4 янв 30 19:23 devfile
+devuser01@ubuntugb:/home/tubalov/hw03$ exit
+exit
+tubalov@ubuntugb:~/hw03$ su devuser02
+Password:
+devuser02@ubuntugb:/home/tubalov/hw03$ cat >> /home/developer/devfile
+456
+devuser02@ubuntugb:/home/tubalov/hw03$ cat /home/developer/devfile
+123
+456
