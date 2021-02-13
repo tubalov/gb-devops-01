@@ -1,0 +1,149 @@
+### 1. Установить Apache2. Прислать лог вводимых команд либо скриншот.
+ubuntu@ip-172-31-45-250:~$ sudo apt install apache2
+...
+ubuntu@ip-172-31-45-250:~$ sudo service apache2 status
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2021-02-13 19:39:31 UTC; 2s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 21458 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+   Main PID: 21472 (apache2)
+      Tasks: 55 (limit: 1160)
+     Memory: 5.5M
+     CGroup: /system.slice/apache2.service
+             ├─21472 /usr/sbin/apache2 -k start
+             ├─21473 /usr/sbin/apache2 -k start
+             └─21474 /usr/sbin/apache2 -k start
+
+Feb 13 19:39:31 ip-172-31-45-250 systemd[1]: Starting The Apache HTTP Server...
+Feb 13 19:39:31 ip-172-31-45-250 systemd[1]: Started The Apache HTTP Server.
+
+### 2. Установить MySQL. Проверить работу, через консольного клиента, проверить команды select user from mysql.users; и select * from users
+
+ubuntu@ip-172-31-45-250:~$ sudo apt install mysql-server php-fpm (fpm для задачи 4)
+...
+ubuntu@ip-172-31-45-250:~$ sudo mysql
+
+mysql> select user from mysql.user;
++------------------+
+| user             |
++------------------+
+| debian-sys-maint |
+| mysql.infoschema |
+| mysql.session    |
+| mysql.sys        |
+| root             |
++------------------+
+5 rows in set (0.00 sec)
+
+mysql> select * from mysql.user limit 5;
++-----------+------------------+-------------+-------------+-------------+-------------+-------------+-----------+-------------+---------------+--------------+-----------+------------+-----------------+------------+------------+--------------+------------+-----------------------+------------------+--------------+-----------------+------------------+------------------+----------------+---------------------+--------------------+------------------+------------+--------------+------------------------+----------+------------------------+--------------------------+----------------------------+---------------+-------------+-----------------+----------------------+-----------------------+------------------------------------------------------------------------+------------------+-----------------------+-------------------+----------------+------------------+----------------+------------------------+---------------------+--------------------------+-----------------+
+| Host      | User             | Select_priv | Insert_priv | Update_priv | Delete_priv | Create_priv | Drop_priv | Reload_priv | Shutdown_priv | Process_priv | File_priv | Grant_priv | References_priv | Index_priv | Alter_priv | Show_db_priv | Super_priv | Create_tmp_table_priv | Lock_tables_priv | Execute_priv | Repl_slave_priv | Repl_client_priv | Create_view_priv | Show_view_priv | Create_routine_priv | Alter_routine_priv | Create_user_priv | Event_priv | Trigger_priv | Create_tablespace_priv | ssl_type | ssl_cipher             | x509_issuer              | x509_subject               | max_questions | max_updates | max_connections | max_user_connections | plugin                | authentication_string                                                  | password_expired | password_last_changed | password_lifetime | account_locked | Create_role_priv | Drop_role_priv | Password_reuse_history | Password_reuse_time | Password_require_current | User_attributes |
++-----------+------------------+-------------+-------------+-------------+-------------+-
+
+### 3. Установить php7.2 и phpmyadmin
+ubuntu@ip-172-31-45-250:~$ sudo apt install phpmyadmin
+...
+ubuntu@ip-172-31-45-250:~$ sudo dpkg -l | grep php7
+ii  php7.4                          7.4.3-4ubuntu2.4                  all          server-side, HTML-embedded scripting language (metapackage)
+ii  php7.4-bz2                      7.4.3-4ubuntu2.4                  amd64        bzip2 module for PHP
+ii  php7.4-cli                      7.4.3-4ubuntu2.4                  amd64        command-line interpreter for the PHP scripting language
+ii  php7.4-common                   7.4.3-4ubuntu2.4                  amd64        documentation, examples and common module for PHP
+ii  php7.4-curl                     7.4.3-4ubuntu2.4                  amd64        CURL module for PHP
+ii  php7.4-fpm                      7.4.3-4ubuntu2.4                  amd64        server-side, HTML-embedded scripting language (FPM-CGI binary)
+ii  php7.4-gd                       7.4.3-4ubuntu2.4                  amd64        GD module for PHP
+ii  php7.4-json                     7.4.3-4ubuntu2.4                  amd64        JSON module for PHP
+ii  php7.4-mbstring                 7.4.3-4ubuntu2.4                  amd64        MBSTRING module for PHP
+ii  php7.4-mysql                    7.4.3-4ubuntu2.4                  amd64        MySQL module for PHP
+ii  php7.4-opcache                  7.4.3-4ubuntu2.4                  amd64        Zend OpCache module for PHP
+ii  php7.4-readline                 7.4.3-4ubuntu2.4                  amd64        readline module for PHP
+ii  php7.4-xml                      7.4.3-4ubuntu2.4                  amd64        DOM, SimpleXML, XML, and XSL module for PHP
+ii  php7.4-zip                      7.4.3-4ubuntu2.4                  amd64        Zip module for PHP
+
+ubuntu@ip-172-31-45-250:~$ sudo dpkg -l | grep phpmy
+ii  php-phpmyadmin-motranslator     5.0.0-1                           all          translation API for PHP using Gettext MO files
+ii  php-phpmyadmin-shapefile        2.1-3                             all          translation API for PHP using Gettext MO files
+ii  php-phpmyadmin-sql-parser       4.6.1-2                           all          validating SQL lexer and parser
+ii  phpmyadmin                      4:4.9.5+dfsg1-2                   all          MySQL web administration tool
+
+### 4. * Установить Nginx и настроить его на работу с php-fpm.
+
+nginx установлен в ДЗ6
+
+ubuntu@ip-172-31-45-250:~$ sudo service nginx status
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2021-02-13 20:11:18 UTC; 39min ago
+       Docs: man:nginx(8)
+   Main PID: 30106 (nginx)
+      Tasks: 2 (limit: 1160)
+     Memory: 4.0M
+     CGroup: /system.slice/nginx.service
+             ├─30106 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+             └─30107 nginx: worker process
+
+Feb 13 20:11:18 ip-172-31-45-250 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Feb 13 20:11:18 ip-172-31-45-250 systemd[1]: Started A high performance web server and a reverse proxy server.
+
+ubuntu@ip-172-31-45-250:~$ sudo mysql
+
+mysql> create user 'phpmyadmin'@'localhost' identified with caching_sha2_password by 'gjgjgfYUNNvsjdgsjagy783g@';
+
+mysql> select user from mysql.user;
++------------------+
+| user             |
++------------------+
+| debian-sys-maint |
+| mysql.infoschema |
+| mysql.session    |
+| mysql.sys        |
+| phpmyadmin       |
+| root             |
++------------------+
+6 rows in set (0.01 sec)
+
+mysql> create database phpmyadmin;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> grant all privileges on *.* to 'phpmyadmin'@'localhost';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> flush privileges;
+Query OK, 0 rows affected (0.01 sec)
+
+ubuntu@ip-172-31-45-250:~$ sudo mysql phpmyadmin < /usr/share/phpmyadmin/sql/create_tables.sql
+
+sudo cat /etc/phpmyadmin/config-db.php
+<?php
+##
+## database access settings in php format
+## automatically generated from /etc/dbconfig-common/phpmyadmin.conf
+## by /usr/sbin/dbconfig-generate-include
+##
+## by default this file is managed via ucf, so you shouldn't have to
+## worry about manual changes being silently discarded.  *however*,
+## you'll probably also want to edit the configuration file mentioned
+## above too.
+##
+$dbuser='phpmyadmin';
+$dbpass='gjgjgfYUNNvsjdgsjagy783g@';
+$basepath='';
+$dbname='phpmyadmin';
+$dbserver='localhost';
+$dbport='3306';
+$dbtype='mysql';
+
+ubuntu@ip-172-31-45-250:~$ sudo service php7.4-fpm restart
+
+
+www.ds-tubalov.ml / localhost / phpmyadmin | phpMyAdmin 4.9.5deb2
+
+Сервер: Localhost via UNIX socket
+Тип сервера: MySQL
+Соединение сервера: SSL не используется Документация
+Версия сервера: 8.0.23-0ubuntu0.20.04.1 - (Ubuntu)
+
+nginx/1.18.0
+Версия клиента базы данных: libmysql - mysqlnd 7.4.3
+PHP расширение: mysqliДокументация curlДокументация mbstringДокументация
+Версия PHP: 7.4.3
