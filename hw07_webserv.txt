@@ -120,7 +120,7 @@ ubuntu@ip-172-31-45-250:~$ sudo rm /etc/nginx/sites-enabled/default
 
 ubuntu@ip-172-31-45-250:~$ sudo mysql
 
-mysql> create user 'phpmyadmin'@'localhost' identified with caching_sha2_password by 'gjgjgfYUNNvsjdgsjagy783g@';
+mysql> create user 'phpmyadmin'@'localhost' identified with caching_sha2_password by 'gjgjxxfYUNNvsjdgsjagy783g@';
 
 mysql> select user from mysql.user;
 +------------------+
@@ -159,7 +159,7 @@ sudo cat /etc/phpmyadmin/config-db.php
 ## above too.
 ##
 $dbuser='phpmyadmin';
-$dbpass='gjgjgfYUNNvsjdgsjagy783g@';
+$dbpass='gjgjxxfYUNNvsjdgsjagy783g@';
 $basepath='';
 $dbname='phpmyadmin';
 $dbserver='localhost';
