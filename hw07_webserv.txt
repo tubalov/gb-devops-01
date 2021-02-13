@@ -85,6 +85,39 @@ ubuntu@ip-172-31-45-250:~$ sudo service nginx status
 Feb 13 20:11:18 ip-172-31-45-250 systemd[1]: Starting A high performance web server and a reverse proxy server...
 Feb 13 20:11:18 ip-172-31-45-250 systemd[1]: Started A high performance web server and a reverse proxy server.
 
+ubuntu@ip-172-31-45-250:~$ sudo nano /etc/nginx/sites-available/ds-tubalov.ml
+server {
+    listen 80;
+    listen [::]:80;
+    server_name ds-tubalov.ml;
+
+    root /usr/share/phpmyadmin/;
+    index  index.php;
+
+    client_max_body_size 100M;
+
+    autoindex off;
+
+     location / {
+        try_files $uri $uri/ /index.php?$query_string;
+      }
+
+    location ~ \.php$ {
+         fastcgi_pass unix:/var/run/php/php-fpm.sock;
+         fastcgi_index index.php;
+         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+         include fastcgi_params;
+    }
+
+    location ~* \.(ico|css|js)(\?[0-9]+)?$ {
+         expires max;
+         log_not_found off;
+    }
+}
+
+ubuntu@ip-172-31-45-250:~$ sudo ln -s /etc/nginx/sites-available/ds-tubalov.ml /etc/nginx/sites-enabled/ds-tubalov.ml
+ubuntu@ip-172-31-45-250:~$ sudo rm /etc/nginx/sites-enabled/default
+
 ubuntu@ip-172-31-45-250:~$ sudo mysql
 
 mysql> create user 'phpmyadmin'@'localhost' identified with caching_sha2_password by 'gjgjgfYUNNvsjdgsjagy783g@';
